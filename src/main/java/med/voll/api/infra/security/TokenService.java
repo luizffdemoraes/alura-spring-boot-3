@@ -33,14 +33,14 @@ public class TokenService {
 
     public String getSubject(String tokenJWT) {
         try {
-            var algoritimo = Algorithm.HMAC256(secret);
-            return JWT.require(algoritimo)
+            var algoritmo = Algorithm.HMAC256(secret);
+            return JWT.require(algoritmo)
                     .withIssuer("API Voll.med")
                     .build()
                     .verify(tokenJWT)
                     .getSubject();
-        } catch (JWTVerificationException exception){
-            throw new RuntimeException("Token inválido ou expirado!");
+        } catch (JWTVerificationException exception) {
+            throw new RuntimeException("Token JWT inválido ou expirado!");
         }
     }
 
