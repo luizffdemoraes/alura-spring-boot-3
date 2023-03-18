@@ -5,6 +5,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+import med.voll.api.domain.endereco.DadosEndereco;
 
 public record DadosCadastroMedico(
         @NotBlank
@@ -15,7 +16,6 @@ public record DadosCadastroMedico(
 
         @NotBlank
         String telefone,
-
         @NotBlank
         @Pattern(regexp = "\\d{4,6}")
         String crm,
