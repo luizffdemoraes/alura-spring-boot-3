@@ -1,6 +1,5 @@
 package med.voll.api.domain.medico;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -22,5 +21,5 @@ public record DadosCadastroMedico(
         @NotNull
         Especialidade especialidade,
 
-        @NotNull @Valid DadosEndereco endereco) {
+        DadosEndereco endereco) {
 }
